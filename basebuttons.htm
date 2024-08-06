@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .myImage {
+      display: none;
+    }
+  </style>
+  <script>
+    let imageName = "";
+
+    function showImage(imageId) {
+      if(imageName!="" && imageName!=imageId){
+        console.log("Turn off ",imageName);
+        document.getElementById(imageName).style.display = "none";
+      }
+      imageName = imageId;
+      document.getElementById(imageId).style.display = "block";
+    }
+  </script>
+</head>
+<body>
+
+  <button onclick="showImage('image1')">Tortilla</button>
+  <button onclick="showImage('image2')">Bowl</button>
+  <!-- <button onclick="showImage('image3')">Show Image 3</button> -->
+
+  <img id="image1" class="myImage" src="tortilla.png" alt="Image 1">
+  <img id="image2" class="myImage" src="bowl.png" alt="Image 2">
+  <!-- <img id="image3" class="myImage" src="your-image-url3.jpg" alt="Image 3"> -->
+
+</body>
+</html>
