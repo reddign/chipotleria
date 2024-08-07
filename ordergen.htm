@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chipotleria Orders</title>
+</head>
+<body>
+    <h1>Orders</h1>
+    <button onclick="generateOrder()">Generate Order</button>
+    <div id="order"></div>
+
+    <script>
+        const items = ['Bowl', 'Tortilla', 'Beef', 'Brown Rice', 'White Rice','Cheese','Veggies'];
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generateOrder() {
+            const order = [];
+            const numberOfItems = getRandomInt(1, 5);
+
+            for (let i = 0; i < numberOfItems; i++) {
+                const itemIndex = getRandomInt(0, items.length - 1);
+                const quantity = getRandomInt(1, 10);
+                const item = items[itemIndex];
+                order.push({
+                    name: item,
+                    quantity: quantity
+                });
+            }
+
+            displayOrder(order);
+        }
+
+        function displayOrder(order) {
+            const orderDiv = document.getElementById('order');
+            orderDiv.innerHTML = '<h2>Order Details</h2>';
+            order.forEach(item => {
+                orderDiv.innerHTML += `<p>${item.quantity} x ${item.name}</p>`;
+            });
+        }
+    </script>
+</body>
+</html>

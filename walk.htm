@@ -1,0 +1,123 @@
+
+
+<!-- Julia's Code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const img = new Image();
+        img.src = 'larry.png'; // image
+
+        let imagePosition = {
+            x: canvas.width, // Enter from right side
+            y: 200,
+            dx: -2, // Move to the left
+            stopX: 200 // Character stops here
+        };
+
+        img.onload = function() {
+            update();
+        };
+
+        function drawImage() {
+            ctx.drawImage(img, imagePosition.x, imagePosition.y);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function update() {
+            clearCanvas();
+            drawImage();
+            if (imagePosition.x > imagePosition.stopX) {
+                imagePosition.x += imagePosition.dx;
+            }
+            requestAnimationFrame(update);
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- Vinaya's Code -->
+<title>Mama's Chipotleria</title>
+<img src="background.jpeg" height="80%"; width="100%">
+<!DOCTYPE html>
+
+<html>
+    <header>
+        <title>NAVBAR</title>
+
+        <style>
+           ul{
+            list-style-type: none;
+            padding: 50;
+            margin: 0;
+            overflow: hidden;
+            background-color: maroon;
+           }
+
+           li{
+            float: left;
+           }
+
+           li a{
+                display: block;
+                color: bisque;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                margin-top: 15px;
+            }
+
+            header{
+                text-align: center;
+            }
+
+            .navbar a{
+                bottom: 0;
+                left: 0;
+                right: 0; 
+                z-index: 5;
+                position: fixed;
+            }
+
+        </style>
+    </header>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                            <li><a href="order.htm">ORDER</a></li>
+                            <li><a href="base.html">BASE</a></li>
+                            <li><a href="../topSongs/index.html">link3</a></li>
+                            <li><a href="madlib/madlib.html" style="float: right;">link4</a></li>
+                            <li><a href="../day6">link5</a></li><li><a href="finish.htm">FINISH</a></li>
+                            <li><a href="../pong">link6</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>
+
+
+
+
