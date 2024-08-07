@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chipotleria Orders</title>
+    <title>Orders</title>
 </head>
 <body>
-    <h1>Orders</h1>
+    <h1>Randomized Orders</h1>
     <button onclick="generateOrder()">Generate Order</button>
     <div id="order"></div>
 
     <script>
-        const items = ['Bowl', 'Tortilla', 'Beef', 'Brown Rice', 'White Rice','Cheese','Veggies'];
+        const items = ['White rice', 'Brown rice ', 'Beef', 'Chicken', 'Tofu', 'Green beans', 'Pinto beans', 'Black beans', 'Corn', 'Lettuce','Fajita veggies'];
+        const requiredItems = ['Bowl', 'Tortilla'];
 
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -21,9 +22,16 @@
             const order = [];
             const numberOfItems = getRandomInt(1, 5);
 
+            // Ensure one required item is included
+            const requiredItem = requiredItems[getRandomInt(0, requiredItems.length - 1)];
+            order.push({
+                name: requiredItem,
+                quantity: 1
+            });
+
             for (let i = 0; i < numberOfItems; i++) {
                 const itemIndex = getRandomInt(0, items.length - 1);
-                const quantity = getRandomInt(1, 10);
+                const quantity = getRandomInt(1, 3);
                 const item = items[itemIndex];
                 order.push({
                     name: item,
