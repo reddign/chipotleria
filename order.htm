@@ -2,6 +2,71 @@
 <title>Mama's Chipotleria</title>
 <img src="background.jpeg" height="80%"; width="100%">
 <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+
+<html>
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Walking on Background</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1500" height="600"></canvas>
+     <!-- size of screen (keep these measurments constant)/|\ -->
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const background = new Image();
+        background.src = 'background.jpeg'; // Replace with the path to your background image
+
+        const character = new Image();
+        character.src = 'larry.png'; // Replace with the path to your character image
+
+        let characterPosition = {
+            x: canvas.width, // Start from the right side
+            y: 200,
+            dx: -2, // Move to the left
+            stopX: 200 // The x-coordinate where the character should stop
+        };
+
+        background.onload = function() {
+            character.onload = function() {
+                update();
+            };
+        };
+
+        function drawBackground() {
+            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+        }
+
+        function drawCharacter() {
+            ctx.drawImage(character, characterPosition.x, characterPosition.y);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function update() {
+            clearCanvas();
+            drawBackground();
+            drawCharacter();
+            if (characterPosition.x > characterPosition.stopX) {
+                characterPosition.x += characterPosition.dx;
+            }
+            requestAnimationFrame(update);
+        }
+    </script>
+</body>
 
 <html>
     <header>
