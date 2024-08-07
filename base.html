@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="base.css">
     <title>Mama's Chipotleria</title>
-</head>
-<body>
-    <canvas style="background-color: rgb(245, 240, 229);height:80%; width:100%" ></canvas>
-    <script    src="base.js"    ></script>
-</body>
 
-<head>
   <style>
     .myImage {
       display: none;
@@ -30,14 +24,24 @@
     }
   </script>
 </head>
+<header>
+  <h1>BASE!</h1>
+</header>
 <body>
+
+  <img id="image1" class="myImage" src="tortilla.png" alt="Image 1" >
+  <img id="image2" class="myImage" src="bowl.png" alt="Image 2" >
+
+  <!-- <img id="image3" class="myImage" src="whiteRice.png" alt="Image 3">
+  <img id="image4" class="myImage" src="brownRice.png" alt="Image 4"> -->
+
 
   <button onclick="showImage('image1')">Tortilla</button>
   <button onclick="showImage('image2')">Bowl</button>
-  <!-- <button onclick="showImage('image3')">Show Image 3</button> -->
 
-  <img id="image1" class="myImage" src="tortilla.png" alt="Image 1" class="right">
-  <img id="image2" class="myImage" src="bowl.png" alt="Image 2" class="right">
+  <!-- <button onclick="showImage('image3')">White Rice</button>
+  <button onclick="showImage('image4')">Brown Rice</button> -->
+  <!-- <button onclick="showImage('image3')">Show Image 3</button> -->
   <!-- <img id="image3" class="myImage" src="your-image-url3.jpg" alt="Image 3"> -->
 
 </body>
@@ -72,7 +76,10 @@
             }
 
             header{
-                text-align: center;
+                padding:5px;
+                text-align: left;
+                background-color: maroon;
+                color: bisque;
             }
 
             .navbar a{
@@ -81,6 +88,21 @@
                 right: 0; 
                 z-index: 5;
                 position: fixed;
+            }
+
+            .right{
+                margin-left: 300px;
+                margin-top: 200px;
+            }
+
+            .left{
+                margin-right: 300px;
+                margin-top: 1000px;
+            }
+
+            body {
+                background-image: url('woodBackground.jpg');
+                background-size: cover;
             }
 
         </style>
