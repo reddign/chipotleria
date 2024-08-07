@@ -1,0 +1,42 @@
+header {
+    background-image: img src="burritobanner.png" ;
+    color: #ffffff;
+    text-align: center;
+}
+
+body{
+    background-image: img src="wood.jpg";
+}
+table, th, td{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    /*border-collapse: collapse;*/
+    border-color: rgb(145, 32, 162);
+}
+thead{
+    background-color: rgb(198, 129, 225);
+    color: #000000;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+
+}
+
+tbody{
+    background-color: rgb(215, 139, 228);
+    color: #000000;
+    text-align: left;
+}
+
+a:link {
+    color: rgb(196, 120, 217);
+    text-align: center;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(194, 94, 201);
+    text-decoration: none;
+}
