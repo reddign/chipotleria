@@ -3,36 +3,126 @@
     <title>Toppings Station Mama's Chipolteria</title>
 </head>
 <body>
-    <style>
-        body {
-    background-image: url('wood.jpg');
-    }
-        </style>
-    
+   
+        
+          <style>
+            .myImage {
+              display: none;
+            }
+          </style>
+          <script>
+            let imageName = "";
+        
+            function showImage(imageId) {
+              if(imageName!="" && imageName!=imageId){
+                console.log("Turn off ",imageName);
+                document.getElementById(imageName).style.display = "none";
+              }
+              imageName = imageId;
+              document.getElementById(imageId).style.display = "block";
+            }
+          </script>
+        </head>
+        <header>
+          <h1>TOPPPINGS PAGE</h1>
+        </header>
+        <body>
+            <BR>
+            <BR>
+
+          <img id="image1" class="myImage" src="beef.png" alt="Image 1" style="height:200;" >
+          <img id="image2" class="myImage" src="nonspecifiedmeet.png" alt="Image 2" style="height:200;">
+          <img id="image3" class="myImage" src="Chicken.png" alt="Image 3" style="height:200;">
+           <!--<img id="image4" class="myImage" src="brownRice.png" alt="Image 4"> -->
+          <img id="image4" class="myImage" src="vegtop1.png" alt="Image 4" style="height:200;" >
+          <img id="image5" class="myImage" src="vegtop2.png" alt="Image 5" style="height:200;">
+          <img id="image6" class="myImage" src="vegtop3.png" alt="Image 6" style="height:200;">
+          <img id="image7" class="myImage" src="vegtop4.png" alt="Image 7" style="height:200;" >
+          <img id="image8" class="myImage" src="vegtop5.png" alt="Image 8" style="height:200;">
+          <img id="image9" class="myImage" src="vegtop6.png" alt="Image 9" style="height:200;">
+        
+          <button onclick="showImage('image1')">Beef</button>
+          <button onclick="showImage('image2')">Tofu</button>
+          <button onclick="showImage('image3')">chicken</button>
+          <BR>
+          <BR>
+            <button onclick="showImage('image4')">Green Benas</button>
+            <button onclick="showImage('image5')">Pinto Beans</button>
+            <button onclick="showImage('image6')">Black beans</button>
+            <button onclick="showImage('image7')">Corn</button>
+          <button onclick="showImage('image8')">Lettuce</button>
+          <button onclick="showImage('image9')">Fajita veggies</button>
+          <!-- <button onclick="showImage('image4')">Brown Rice</button> -->
+          <!-- <button onclick="showImage('image3')">Show Image 3</button> -->
+          <!-- <img id="image3" class="myImage" src="your-image-url3.jpg" alt="Image 3"> -->
+        
+        </body>
     <!-- topping station -->
     
-        <header>
+        <!-- <header>
             <h1>Toppings Station</h1>
-        </header>
+        </header> -->
             <script src="toppings.js"></script>
-        <style>
-        /* header {
-            padding: 38px;
-            text-align: left;
-            background-image:url('purple.jpg');
-            color: white;
-            font-size: 20px;
-
-          } */
-        </style>
+            <style>
+                ul{
+                 list-style-type: none;
+                 padding: 50;
+                 margin: 0;
+                 overflow: hidden;
+                 background-color: maroon;
+                }
+     
+                li{
+                 float: left;
+                }
+     
+                li a{
+                     display: block;
+                     color: bisque;
+                     padding: 14px 16px;
+                     text-decoration: none;
+                     font-size: 20px;
+                     margin-top: 15px;
+                 }
+     
+                 header{
+                     padding:5px;
+                     text-align: left;
+                     background-color: maroon;
+                     color: bisque;
+                 }
+     
+                 .navbar a{
+                     bottom: 1000;
+                     left: 0;
+                     right: 0; 
+                     z-index: 5;
+                     position: fixed;
+                 }
+     
+                 .right{
+                     margin-left: 300px;
+                     margin-top: 200px;
+                 }
+     
+                 .left{
+                     margin-right: 300px;
+                     margin-top: 1000px;
+                 }
+     
+                 body {
+                     background-image: url('woodBackground.jpg');
+                     background-size: cover;
+                 }
+     
+             </style>
         <main>
         
             <img src="burrito.png" height="100" alt="Burrito">
 
-            <img src="beef.png" alt="logo" style="height:200; bottom: 30; right: 0; position: fixed">
-            <img src="nonspecifiedmeet.png" alt="logo" style="height:200; bottom: 20; right: 200; position: fixed">
-            <img src="tortilla.png" alt="tortilla" style="height:450; bottom: 130; right: 100; position: fixed">
-
+            <!-- <img src="beef.png" alt="logo" style="height:200; bottom: 30; right: 0; position: fixed">
+            <img src="nonspecifiedmeet.png" alt="logo" style="height:200; bottom: 20; right: 200; position: fixed"> -->
+            <img src="tortilla.png" alt="tortilla" style="height:450; bottom: 50; right: 400; position: fixed">
             <thread>
 
             </table>
