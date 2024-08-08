@@ -32,78 +32,93 @@
   <img id="image1" class="myImage" src="tortilla.png" alt="Image 1" >
   <img id="image2" class="myImage" src="bowl.png" alt="Image 2" >
 
-  <!-- <img id="image3" class="myImage" src="whiteRice.png" alt="Image 3">
-  <img id="image4" class="myImage" src="brownRice.png" alt="Image 4"> -->
+  <img id="image3" class="myImage" src="tortillaWithWhiteRice.png" alt="Image 3">
+  <img id="image4" class="myImage" src="tortillaWithBrownRice.png" alt="Image 4">
 
 
   <button onclick="showImage('image1')">Tortilla</button>
   <button onclick="showImage('image2')">Bowl</button>
 
-  <!-- <button onclick="showImage('image3')">White Rice</button>
-  <button onclick="showImage('image4')">Brown Rice</button> -->
   <!-- <button onclick="showImage('image3')">Show Image 3</button> -->
   <!-- <img id="image3" class="myImage" src="your-image-url3.jpg" alt="Image 3"> -->
 
-</body>
-</html>
+    
+        <canvas onmousemove= drawStuff(event) onmousedown="pickRice(event);startDrawing();" onmouseup="stopDrawing();"></canvas>
+        <script>
 
-<!DOCTYPE html>
+          let img= document.createElement("img");
 
-<html>
-    <header>
-        <title>NAVBAR</title>
+          img.src= "whiteRice.png";
 
-        <style>
-           ul{
-            list-style-type: none;
-            padding: 50;
-            margin: 0;
-            overflow: hidden;
-            background-color: maroon;
-           }
+          document.body.appendChild(img);
+          img.width = 160;
+          img.height = 150;
+          img.style.position = absolute;
+          img.style.left = "50px";
+          </script>
 
-           li{
-            float: left;
-           }
+          <script>
+          let img2= document.createElement("img2");
 
-           li a{
-                display: block;
-                color: bisque;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 20px;
-                margin-top: 15px;
+          img2.src= "brownRice.png";
+
+          document.body.appendChild(img2);
+          img2.width = 160;
+          img2.height = 150;
+          img2.style.position = absolute;
+          img2.style.left = "50px";
+
+        </script>
+        <img id="image3" class="myImage" src="tortillaWithWhiteRice.png" alt="Image 3">
+        <img id="image4" class="myImage" src="tortillaWithBrownRice.png" alt="Image 4">
+
+        <button onclick="showImage('image3')">White Rice</button>
+        <button onclick="showImage('image4')">Brown Rice</button> 
+
+        <header>
+          <title>NAVBAR</title>
+
+          <style>
+            ul{
+              list-style-type: none;
+              padding: 50;
+              margin: 0;
+              overflow: hidden;
+              background-color: maroon;
             }
 
-            header{
-                padding:5px;
-                text-align: left;
-                background-color: maroon;
-                color: bisque;
+            li{
+              float: left;
             }
 
-            .navbar a{
-                bottom: 0;
-                left: 0;
-                right: 0; 
-                z-index: 5;
-                position: fixed;
-            }
+            li a{
+                  display: block;
+                  color: bisque;
+                  padding: 14px 16px;
+                  text-decoration: none;
+                  font-size: 20px;
+                  margin-top: 15px;
+              }
 
-            .right{
-                margin-left: 300px;
-                margin-top: 200px;
-            }
+              header{
+                  padding:5px;
+                  text-align: left;
+                  background-color: maroon;
+                  color: bisque;
+              }
 
-            .left{
-                margin-right: 300px;
-                margin-top: 1000px;
-            }
+              .navbar a{
+                  bottom: 0;
+                  left: 0;
+                  right: 0; 
+                  z-index: 5;
+                  position: fixed;
+              }
 
-            body {
-                background-image: url('woodBackground.jpg');
-                background-size: cover;
-            }
+              .right{
+                  margin-left: 300px;
+                  margin-top: 200px;
+              }
 
         </style>
             <nav>
