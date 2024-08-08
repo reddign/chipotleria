@@ -28,7 +28,7 @@ if (!isset($_SESSION["rice"])){
 }
 
 
-print_r($_SESSION);
+// print_r($_SESSION);
 ?>
 
 <script>
