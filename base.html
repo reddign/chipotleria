@@ -9,6 +9,9 @@
   <style>
     .myImage {
       display: none;
+      margin-left: auto;
+      margin-right:auto;
+
     }
   </style>
   <script>
@@ -37,7 +40,7 @@
 
 
   <button onclick="showImage('image1')">Tortilla</button>
-  <button onclick="showImage('image2')">Bowl</button>
+  <!-- <button onclick="showImage('image2')">Bowl</button> -->
 
   <!-- <button onclick="showImage('image3')">Show Image 3</button> -->
   <!-- <img id="image3" class="myImage" src="your-image-url3.jpg" alt="Image 3"> -->
@@ -46,27 +49,7 @@
         <canvas onmousemove= drawStuff(event) onmousedown="pickRice(event);startDrawing();" onmouseup="stopDrawing();"></canvas>
         <script>
 
-          let img= document.createElement("img");
 
-          img.src= "whiteRice.png";
-
-          document.body.appendChild(img);
-          img.width = 160;
-          img.height = 150;
-          img.style.position = absolute;
-          img.style.left = "50px";
-          </script>
-
-          <script>
-          let img2= document.createElement("img2");
-
-          img2.src= "brownRice.png";
-
-          document.body.appendChild(img2);
-          img2.width = 160;
-          img2.height = 150;
-          img2.style.position = absolute;
-          img2.style.left = "50px";
 
         </script>
         <img id="image3" class="myImage" src="tortillaWithWhiteRice.png" alt="Image 3">
@@ -76,7 +59,6 @@
         <button onclick="showImage('image4')">Brown Rice</button> 
 
         <header>
-          <title>NAVBAR</title>
 
           <style>
             ul{
@@ -117,6 +99,12 @@
               .right{
                   margin-left: 300px;
                   margin-top: 200px;
+              }
+
+              body{
+                  background-image: url("woodBackground.jpg");
+                  background-size: cover;
+              
               }
 
         </style>

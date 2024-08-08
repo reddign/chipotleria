@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="base.css">
+   
     <title>Mama's Chipotleria</title>
 
   <style>
@@ -27,13 +27,13 @@ require "globalJS.php";
       document.getElementById(imageId).style.display = "block";
 
       if(imageId=="image1"){
-        container="tortilla";
+        newcontainer="tortilla";
       }
       
       if(imageId=="image2"){
-        container="bowl";
+        newcontainer="bowl";
       }
-      header("location:savecontainer.php?container="+container);
+      window.location="savecontainer.php?container="+newcontainer;
     }
 
    

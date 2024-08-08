@@ -136,6 +136,7 @@
             <!-- <img src="beef.png" alt="logo" style="height:200; bottom: 30; right: 0; position: fixed">
             <img src="nonspecifiedmeet.png" alt="logo" style="height:200; bottom: 20; right: 200; position: fixed"> -->
             <?php
+            echo "container is ".$container;
 
             if($container=="tortilla"){
             
