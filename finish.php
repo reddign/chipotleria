@@ -44,8 +44,9 @@
                 position: fixed;
             }
             body {
-                background-image: url('woodBackground.jpg');
-                background-size: cover;
+                background-image: url('checkout.png');
+                background-size: 1600px 800px; /* width height */
+                background-position: 90% -120%; /* 90% from the left, 50% from the top */
             }
 
         </style>
