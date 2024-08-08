@@ -44,10 +44,10 @@
                 position: fixed;
             }
             body {
-                background-image: url('checkout.png');
-                background-size: 1600px 800px; /* width height */
-                background-position: 90% -120%; /* 90% from the left, 50% from the top */
+                background-image: url('woodBackground.jpg');
+                background-size: cover;
             }
+
         </style>
     </header>
 
@@ -74,7 +74,7 @@
     let x= Math.random()*10;
     x= Math.round(x);
     if(x==1){
-    alert('You got $1.');
+    alert('Ypu got $1.');
 }else if(x==2){
     alert("You got $2.");
 }else if(x==3){
