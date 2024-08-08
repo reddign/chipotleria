@@ -18,13 +18,25 @@ require "globalJS.php";
     let imageName = "";
 
     function showImage(imageId) {
+      //turn off tortilla
       if(imageName!="" && imageName!=imageId){
         console.log("Turn off ",imageName);
         document.getElementById(imageName).style.display = "none";
       }
       imageName = imageId;
       document.getElementById(imageId).style.display = "block";
+
+      if(imageId=="image1"){
+        container="tortilla";
+      }
+      
+      if(imageId=="image2"){
+        container="bowl";
+      }
+      header("location:savecontainer.php?container="+container);
     }
+
+   
   </script>
 </head>
 <header>
@@ -122,3 +134,14 @@ require "globalJS.php";
         </header>
     </body>
 </html>
+
+<script>
+ if(container=="bowl"){
+      document.getElementById("image2").style.display = "block";
+      imageName="image2";
+
+    }else if(container=="tortilla"){
+      document.getElementById("image1").style.display = "block";
+      imageName="image1";
+    }
+  </script>

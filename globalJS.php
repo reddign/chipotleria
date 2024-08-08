@@ -17,7 +17,8 @@ if (!isset($_SESSION["rice"])){
     $sauce=$_SESSION["sauce"];
     $beans=$_SESSION["beans"];
 }else{
-    $container=$_SESSION["container"];
+    //$container=$_SESSION["container"];
+    $container = "";
     $rice=$_SESSION["rice"];
     $cheese=$_SESSION["chese"];
     $meat=$_SESSION["meat"];

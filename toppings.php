@@ -133,11 +133,22 @@
              </style>
         <main>
         
-            <img src="burrito.png" height="100" alt="Burrito">
+
 
             <!-- <img src="beef.png" alt="logo" style="height:200; bottom: 30; right: 0; position: fixed">
             <img src="nonspecifiedmeet.png" alt="logo" style="height:200; bottom: 20; right: 200; position: fixed"> -->
-            <img src="tortilla.png" alt="tortilla" style="height:450" coords="150,20,350,200"; >
+            <?php
+
+            if($container=="tortilla"){
+            
+                echo '<img src="tortilla.png" id="tortilla" alt="tortilla" style="height:450" coords="150,20,350,200"; >';
+            }else{
+                echo '<img src="bowl.png" id="bowl" alt="bowl" style="height:450" coords="150,20,350,200"; >';
+       
+            }
+            
+            ?>
+            
             <thread>
 
             </table>
