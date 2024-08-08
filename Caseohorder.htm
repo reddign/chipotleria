@@ -1,0 +1,133 @@
+<!-- Vinaya's Code -->
+<title>Mama's Chipotleria</title>
+
+
+
+<html>
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1500" height="600"></canvas>
+     <!-- size of screen (keep these measurments constant)/|\ -->
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const background = new Image();
+        background.src = 'background.jpeg'; // Replace with the path to your background image
+
+        // const character = new Image();
+        // character.src = 'larry.png'; // Replace with the path to your character image
+        
+        const character = new Image();
+        character.src = 'Caseoh.png'; // Replace with the path to your character imag
+
+        // let characterPosition = {
+        //     x: canvas.width, // Start from the right side
+        //     y: 200,
+        //     dx: -2, // Move to the left
+        //     stopX: 200 // The x-coordinate where the character should stop
+        // };
+
+        let characterPosition = {
+            x: canvas.width, // Start from the right side
+            y: 20,
+            dx: -2, // Move to the left
+            stopX: 200 // The x-coordinate where the character should stop
+        }
+        background.onload = function() {
+            character.onload = function() {
+                update();
+            };
+        };
+
+        function drawBackground() {
+            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+        }
+
+        function drawCharacter() {
+            ctx.drawImage(character, characterPosition.x, characterPosition.y);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function update() {
+            clearCanvas();
+            drawBackground();
+            drawCharacter();
+            if (characterPosition.x > characterPosition.stopX) {
+                characterPosition.x += characterPosition.dx;
+            }
+            requestAnimationFrame(update);
+        }
+    </script>
+</body>
+
+<html>
+    <header>
+        <title>NAVBAR</title>
+
+        <style>
+           ul{
+            list-style-type: none;
+            padding: 50;
+            margin: 0;
+            overflow: hidden;
+            background-color: maroon;
+           }
+
+           li{
+            float: left;
+           }
+
+           li a{
+                display: block;
+                color: bisque;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                margin-top: 15px;
+            }
+
+            header{
+                text-align: center;
+            }
+
+            .navbar a{
+                bottom: 0;
+                left: 0;
+                right: 0; 
+                z-index: 5;
+                position: fixed;
+            }
+
+        </style>
+    </header>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                            <li><a href="order.htm">ORDER</a></li>
+                            <li><a href="base.html">BASE</a></li>
+                            <li><a href="toppings.html">TOPPINGS</a></li>
+                            <li><a href="finish.htm">FINISH</a></li>
+                            
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>

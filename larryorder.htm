@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Walking on Background</title>
+    <title>Order</title>
     <style>
         canvas {
             border: 1px solid black;
@@ -25,16 +25,25 @@
         const background = new Image();
         background.src = 'background.jpeg'; // Replace with the path to your background image
 
+        // const character = new Image();
+        // character.src = 'larry.png'; // Replace with the path to your character image
+        
         const character = new Image();
-        character.src = 'larry.png'; // Replace with the path to your character image
+        character.src = 'larry.png'; // Replace with the path to your character imag
+
+        // let characterPosition = {
+        //     x: canvas.width, // Start from the right side
+        //     y: 200,
+        //     dx: -2, // Move to the left
+        //     stopX: 200 // The x-coordinate where the character should stop
+        // };
 
         let characterPosition = {
             x: canvas.width, // Start from the right side
             y: 200,
             dx: -2, // Move to the left
             stopX: 200 // The x-coordinate where the character should stop
-        };
-
+        }
         background.onload = function() {
             character.onload = function() {
                 update();
