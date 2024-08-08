@@ -49,6 +49,9 @@
             }
 
         </style>
+         <?php
+        require "globalJS.php";
+        ?>
     </header>
 
     <body>

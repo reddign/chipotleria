@@ -11,6 +11,9 @@
       display: none;
     }
   </style>
+  <?php
+require "globalJS.php";
+  ?>
   <script>
     let imageName = "";
 
