@@ -1,3 +1,4 @@
+<html>
 <head>
     <!-- <link rel="Stylesheet" href="style.css"> -->
     <title>Toppings Station Mama's Chipotleria</title>
@@ -29,7 +30,6 @@
         <header>
           <h1>TOPPINGS PAGE</h1>
         </header>
-        <body>
         
           <img id="image1" class="myImage" src="beef.png" alt="Image 1" style="height:200;" >
           <img id="image2" class="myImage" src="nonspecifiedmeet.png" alt="Image 2" style="height:200;">
@@ -61,7 +61,6 @@
           <!-- <button onclick="showImage('image3')">Show Image 3</button> -->
           <!-- <img id="image3" class="myImage" src="your-image-url3.jpg" alt="Image 3"> -->
         
-        </body>
     <!-- topping station -->
     
         <!-- <header>
@@ -71,7 +70,6 @@
             <style>
                 ul{
                  list-style-type: none;
-                 padding: 50;
                  margin: 0;
                  overflow: hidden;
                  background-color: maroon;
@@ -155,13 +153,23 @@
         </main>
 
         <footer>
-            <p> </p>
+        <nav>
+                <ul>
+                    <li>
+                            <li><a href="order.htm">ORDER</a></li>
+                            <li><a href="base.php">BASE</a></li>
+                            <li><a href="toppings.php">TOPPINGS</a></li>
+                            <li><a href="finish.php">FINISH</a></li>
+                            
+                    </li>
+                </ul>
+            </nav>
         </footer>
     
 </body>
 </html>
 <!DOCTYPE html>
-
+<!-- 
 <html>
     <header>
         <title>NAVBAR</title>
@@ -218,4 +226,4 @@
             </nav>
         </header>
     </body>
-</html>
+</html> -->

@@ -71,7 +71,6 @@ require "globalJS.php";
         <style>
            ul{
             list-style-type: none;
-            padding: 50;
             margin: 0;
             overflow: hidden;
             background-color: maroon;
