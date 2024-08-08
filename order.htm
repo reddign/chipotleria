@@ -1,23 +1,59 @@
-<!-- Vinaya's Code -->
-<title>Mama's Chipotleria</title>
-
-
-
+<!DOCTYPE html>
 <html>
-  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>Mama's Chipotleria</title>
     <style>
         canvas {
             border: 1px solid black;
         }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            overflow: hidden;
+            background-color: maroon;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: bisque;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        header {
+            padding: 5px;
+            text-align: center;
+            background-color: maroon;
+            color: bisque;
+        }
+        .navbar a {
+            bottom: 0;
+            left: 0;
+            right: 0; 
+            z-index: 5;
+            position: fixed;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="order.htm">ORDER</a></li>
+                <li><a href="base.php">BASE</a></li>
+                <li><a href="toppings.php">TOPPINGS</a></li>
+                <li><a href="finish.php">FINISH</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <canvas id="canvas" width="1500" height="600"></canvas>
-     <!-- size of screen (keep these measurments constant)/|\ -->
+    
     <script>
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
@@ -25,25 +61,16 @@
         const background = new Image();
         background.src = 'counter.png'; // background image
 
-        // const character = new Image();
-        // character.src = 'larry.png'; // character 
-        
         const character = new Image();
         character.src = 'larry.png'; // character
-
-        // let characterPosition = {
-        //     x: canvas.width, // Start from the right side
-        //     y: 200,
-        //     dx: -2, // Move to the left
-        //     stopX: 200 // The x-coordinate where the character should stop
-        // };
 
         let characterPosition = {
             x: canvas.width, // Start from the right side
             y: 200,
             dx: -2, // Move to the left
             stopX: 200 // The x-coordinate where the character should stop
-        }
+        };
+
         background.onload = function() {
             character.onload = function() {
                 update();
@@ -72,79 +99,49 @@
             requestAnimationFrame(update);
         }
     </script>
+
+    <button onclick="generateOrder()">Generate Order</button>
+    <div id="order"></div>
+    
+    <script>
+        const items = ['White rice', 'Brown rice', 'Beef', 'Chicken', 'Tofu', 'Green beans', 'Pinto beans', 'Black beans', 'Corn', 'Lettuce', 'Fajita veggies'];
+        const requiredItems = ['Bowl', 'Tortilla'];
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generateOrder() {
+            const order = [];
+            const numberOfItems = getRandomInt(1, 5);
+
+            // Ensure one required item is included
+            const requiredItem = requiredItems[getRandomInt(0, requiredItems.length - 1)];
+            order.push({
+                name: requiredItem,
+                quantity: 1
+            });
+
+            for (let i = 0; i < numberOfItems; i++) {
+                const itemIndex = getRandomInt(0, items.length - 1);
+                const quantity = getRandomInt(1, 1); // Always 1, adjust if needed
+                const item = items[itemIndex];
+                order.push({
+                    name: item,
+                    quantity: quantity
+                });
+            }
+
+            displayOrder(order);
+        }
+
+        function displayOrder(order) {
+            const orderDiv = document.getElementById('order');
+            orderDiv.innerHTML = '<h2>Order Details</h2>';
+            order.forEach(item => {
+                orderDiv.innerHTML += `<p>${item.quantity} x ${item.name}</p>`;
+            });
+        }
+    </script>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html>
-    <header>
-        <title>NAVBAR</title>
-
-        <style>
-           ul{
-            list-style-type: none;
-            margin: 0;
-            overflow: hidden;
-            background-color: maroon;
-           }
-
-           li{
-            float: left;
-           }
-
-           li a{
-                display: block;
-                color: bisque;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 20px;
-                margin-top: 15px;
-            }
-
-            header{
-                text-align: center;
-            }
-
-            .navbar a{
-                bottom: 0;
-                left: 0;
-                right: 0; 
-                z-index: 5;
-                position: fixed;
-            }
-
-        </style>
-    </header>
-
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                            <li><a href="order.htm">ORDER</a></li>
-                            <li><a href="base.php">BASE</a></li>
-                            <li><a href="toppings.php">TOPPINGS</a></li>
-                            <li><a href="finish.php">FINISH</a></li>
-                            
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    </body>
 </html>
