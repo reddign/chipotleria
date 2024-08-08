@@ -110,7 +110,7 @@
                 <ul>
                     <li>
                             <li><a href="order.htm">ORDER</a></li>
-                            <li><a href="base,php">BASE</a></li>
+                            <li><a href="base.php">BASE</a></li>
                             <li><a href="toppings.php">TOPPINGS</a></li>
                             <li><a href="finish.php">FINISH</a></li>
                     </li>
