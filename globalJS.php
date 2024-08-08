@@ -4,14 +4,14 @@ if (!isset($_SESSION["rice"])){
     $_SESSION["container"]="";
     $_SESSION["rice"]="";
     // Incase they are needed in the fututr
-    $_SESSION["chese"]="";
+    $_SESSION["cheese"]="";
     $_SESSION["meat"]="";
     $_SESSION["veggie"]="";
     $_SESSION["sauce"]="";
     $_SESSION["beans"]="";
     $container=$_SESSION["container"];
     $rice=$_SESSION["rice"];
-    $cheese=$_SESSION["chese"];
+    $cheese=$_SESSION["cheese"];
     $meat=$_SESSION["meat"];
     $veggie=$_SESSION["veggie"];
     $sauce=$_SESSION["sauce"];
@@ -20,7 +20,7 @@ if (!isset($_SESSION["rice"])){
     //$container=$_SESSION["container"];
     $container = "";
     $rice=$_SESSION["rice"];
-    $cheese=$_SESSION["chese"];
+    $cheese=$_SESSION["cheese"];
     $meat=$_SESSION["meat"];
     $veggie=$_SESSION["veggie"];
     $sauce=$_SESSION["sauce"];
