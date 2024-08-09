@@ -133,7 +133,7 @@
         
 
 
-            <!-- <img src="beef.png" alt="logo" style="height:200; bottom: 30; right: 0; position: fixed">
+           <!-- <img src="beef.png" alt="logo" style="height:200; bottom: 30; right: 0; position: fixed">
             <img src="nonspecifiedmeet.png" alt="logo" style="height:200; bottom: 20; right: 200; position: fixed"> -->
             <?php
             echo "container is ".$container;
@@ -157,7 +157,11 @@
         <nav>
                 <ul>
                     <li>
+<<<<<<< HEAD
                     <li><a href="order.htm">ORDER</a></li>
+=======
+                            <li><a href="order.htm">ORDER</a></li>
+>>>>>>> e7bc406 (fixed the linking situtaion)
                             <li><a href="base.html">BASE</a></li>
                             <li><a href="toppings.html">TOPPINGS</a></li>
                             <li><a href="finish.php">FINISH</a></li>
@@ -218,8 +222,8 @@
                 <ul>
                     <li>
                             <li><a href="order.htm">ORDER</a></li>
-                            <li><a href="base.php">BASE</a></li>
-                            <li><a href="toppings.php">TOPPINGS</a></li>
+                            <li><a href="base.html">BASE</a></li>
+                            <li><a href="toppings.html">TOPPINGS</a></li>
                             <li><a href="finish.php">FINISH</a></li>
                             
                     </li>

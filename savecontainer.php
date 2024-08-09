@@ -3,4 +3,4 @@ session_start();
 $_SESSION["container"]=$_GET["container"];
 
 
-header("location:base.php");
+header("location:base.html");

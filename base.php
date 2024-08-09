@@ -123,7 +123,11 @@ require "globalJS.php";
             <nav>
                 <ul>
                     <li>
+<<<<<<< HEAD
                     <li><a href="order.htm">ORDER</a></li>
+=======
+                            <li><a href="order.htm">ORDER</a></li>
+>>>>>>> e7bc406 (fixed the linking situtaion)
                             <li><a href="base.html">BASE</a></li>
                             <li><a href="toppings.html">TOPPINGS</a></li>
                             <li><a href="finish.php">FINISH</a></li>
