@@ -157,9 +157,9 @@
         <nav>
                 <ul>
                     <li>
-                            <li><a href="order.htm">ORDER</a></li>
-                            <li><a href="base.php">BASE</a></li>
-                            <li><a href="toppings.php">TOPPINGS</a></li>
+                    <li><a href="order.htm">ORDER</a></li>
+                            <li><a href="base.html">BASE</a></li>
+                            <li><a href="toppings.html">TOPPINGS</a></li>
                             <li><a href="finish.php">FINISH</a></li>
                             
                     </li>
