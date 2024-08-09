@@ -66,20 +66,15 @@
         <!-- size of screen (keep these measurements constant)/|\ -->
         <button onclick="start()">Done!</button>
         <script>
-<<<<<<< HEAD
             const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
             const background = new Image();
-
             background.onload = function() {
                 ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
             };
             background.src = 'checkout.png'; // background image
 
-            function start() 
-                let x = Math.floor(Math.random() * 10) + 1;
-                alert(`You got $${x}.`);
-=======
+
             function start(){
                 
     let x= Math.random()*10;
@@ -105,7 +100,6 @@ alert("You got $5.");
 }else{
     alert("You got $10!");
 }
->>>>>>> ca0658c (edits)
             }
         </script>
     </main>
