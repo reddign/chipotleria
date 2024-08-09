@@ -66,6 +66,24 @@
             margin-right: 100px;
             margin-top: 10px;
         }
+
+        #getData {
+            width: 380px;
+            height: 375px;
+            padding: 10px;
+            background-image: url('tortilla.png');
+            margin-left: 600px;
+            margin-top: 0;
+            padding-top: 0;
+      }
+
+      .rollButton {
+        top:11%;
+       left:55%;
+       width:100px;
+       height:40px;
+       position: absolute;
+      }
     </style>
     <script>
         let imageName = "";
@@ -78,6 +96,20 @@
             imageName = imageId;
             document.getElementById(imageId).style.display = "block";
         }
+
+        function allowDrop(even) {
+          even.preventDefault();
+      }
+
+      function drag(even) {
+          even.dataTransfer.setData("text", even.target.id);
+      }
+
+      function drop(even) {
+          even.preventDefault();
+          let fetchData = even.dataTransfer.getData("text");
+          even.target.appendChild(document.getElementById(fetchData));
+      }
     </script>
 </head>
 <body>
@@ -94,7 +126,7 @@
     </header>
 
     <main>
-        <img id="image1" class="myImage" src="beef.png" alt="Image 1" style="height:200px;">
+        <!-- <img id="image1" class="myImage" src="beef.png" alt="Image 1" style="height:200px;">
         <img id="image2" class="myImage" src="nonspecifiedmeet.png" alt="Image 2" style="height:200px;">
         <img id="image3" class="myImage" src="Chicken.png" alt="Image 3" style="height:200px;">
         <img id="image4" class="myImage" src="vegtop1.png" alt="Image 4" style="height:200px;">
@@ -112,14 +144,145 @@
         <h2>Choose your Vegetables</h2>
         <button onclick="showImage('image9')">Green Beans</button>
         <button onclick="showImage('image5')">Lettuce</button>
-        <button onclick="showImage('image8')">Black beans</button>
+        <button onclick="showImage('image8')">Black Beans</button>
         <button onclick="showImage('image4')">Corn</button>
-        <button onclick="showImage('image6')">Fajita veggies</button>
-        <button onclick="showImage('image7')">Kidney beans</button>
+        <button onclick="showImage('image6')">Fajita Veggies</button>
+        <button onclick="showImage('image7')">Kidney Beans</button> -->
+
+        <!-- Start of making the draggable ingredients -->
+
+        <!-- Tofu -->
+        <div id="getData" 
+         ondrop="drop(event)" 
+         ondragover="allowDrop(event)">
+        </div>
+        <br> 
+        <img id="dragData" 
+         src="onlyTofu.png"
+         draggable="true" 
+         ondragstart="drag(event)" 
+         width="250" 
+         height="200"> 
+
+         <!-- Beef -->
+
+         <div id="getData2" 
+         ondrop="drop(event)" 
+         ondragover="allowDrop(event)">
+        </div>
+        <br> 
+        <img id="dragData2" 
+         src="onlyBeef.png"
+         draggable="true" 
+         ondragstart="drag(event)" 
+         width="250" 
+         height="200"> 
+
+         <!-- Chicken -->
+
+         <div id="getData3" 
+         ondrop="drop(event)" 
+         ondragover="allowDrop(event)">
+        </div>
+        <br> 
+        <img id="dragData3" 
+         src="onlyChicken.png"
+         draggable="true" 
+         ondragstart="drag(event)" 
+         width="250" 
+         height="200"> 
+
+         <!-- Pinto Beans -->
+
+         <div id="getData4" 
+         ondrop="drop(event)" 
+         ondragover="allowDrop(event)">
+        </div>
+        <br> 
+        <img id="dragData4" 
+         src="onlyPinto.png"
+         draggable="true" 
+         ondragstart="drag(event)" 
+         width="250" 
+         height="200"> 
+
+         <!-- Lettuce -->
+
+         <div id="getData5" 
+         ondrop="drop(event)" 
+         ondragover="allowDrop(event)">
+        </div>
+        <br> 
+        <img id="dragData5" 
+         src="onlyLettuce.png"
+         draggable="true" 
+         ondragstart="drag(event)" 
+         width="250" 
+         height="200"> 
+
+         <!-- Black Beans -->
+
+         <div id="getData6" 
+         ondrop="drop(event)" 
+         ondragover="allowDrop(event)">
+        </div>
+        <br> 
+        <img id="dragData6" 
+         src="onlyBlackBeans.png"
+         draggable="true" 
+         ondragstart="drag(event)" 
+         width="250" 
+         height="200"> 
+
+         <!-- Corn -->
+
+         <div id="getData7" 
+         ondrop="drop(event)" 
+         ondragover="allowDrop(event)">
+        </div>
+        <br> 
+        <img id="dragData7" 
+         src="onlyCorn.png"
+         draggable="true" 
+         ondragstart="drag(event)" 
+         width="250" 
+         height="200"> 
+
+         <!-- Fajita Veggies -->
+
+         <div id="getData8" 
+         ondrop="drop(event)" 
+         ondragover="allowDrop(event)">
+        </div>
+        <br> 
+        <img id="dragData8" 
+         src="onlyFajitaVeg.png"
+         draggable="true" 
+         ondragstart="drag(event)" 
+         width="250" 
+         height="200"> 
+
+         <!-- Kidney Beans -->
+
+         <div id="getData9" 
+         ondrop="drop(event)" 
+         ondragover="allowDrop(event)">
+        </div>
+        <br> 
+        <img id="dragData9" 
+         src="onlyKidneyBeans.png"
+         draggable="true" 
+         ondragstart="drag(event)" 
+         width="250" 
+         height="200"> 
+
+         <!-- Roll Button -->
+
+         <img id="image9" class="myImage" src="burrito.png" alt="Image 9" width="370px" height="300px" >
+         <button onclick="showImage('image9')" class="rollButton">ROLL!</button>
 
         <img src="burrito.png" height="100" alt="Burrito">
-        <img src="tortilla.png" alt="tortilla" style="position:absolute; top:70px;" class="right">
-    </main>
+        
 
     <footer>
         <nav>
